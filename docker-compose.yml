@@ -1,0 +1,13 @@
+version: "3"
+services:
+  dhcpd:
+    container_name: dhcpd
+    environment:
+    - DHCP_INTERFACES=br0
+    - DHCP_IP=4
+    image: volkerraschek/dhcpd-docker:latest
+    network_mode: host
+    volumes:
+    - ${PWD}/config:/etc/dhcp:ro
+    - ${PWD}/data:/var/lib/dhcp:rw
+    - /etc/localtime:/etc/localtime:ro
