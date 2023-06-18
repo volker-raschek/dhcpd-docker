@@ -5,8 +5,8 @@ CONTAINER_RUNTIME?=$(shell which docker)
 
 # DHCPD_IMAGE_REGISTRY_NAME
 # Defines the name of the new container to be built using several variables.
-DHCPD_IMAGE_REGISTRY_NAME:=docker.io
-DHCPD_IMAGE_REGISTRY_USER:=volkerraschek
+DHCPD_IMAGE_REGISTRY_NAME:=git.cryptic.systems
+DHCPD_IMAGE_REGISTRY_USER:=volker.raschek
 
 DHCPD_IMAGE_NAMESPACE?=${DHCPD_IMAGE_REGISTRY_USER}
 DHCPD_IMAGE_NAME:=dhcpd
